@@ -1,5 +1,249 @@
-<html>
-    <head>
-        <title>Portfolio</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jacques' Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="jacques-favicon.jpg" />
+
+  <!-- Google Fonts: Playfair Display + DM Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Portfolio Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Vanilla Tilt -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" defer></script>
+  <!-- Typed.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js" defer></script>
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+  <!-- Portfolio Script -->
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">Jacques Nico Belmonte</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode">🌙</button>
+    </ul>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section id="hero">
+    <div class="hero-bg-line"></div>
+
+    <div class="hero-left">
+      <div class="hero-tag" data-aos="fade-right" data-aos-duration="600">Entry Level AI Developer · Entry Level Data Scientist</div>
+      <h1 data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+        Building<br><em>intelligent</em><br>experiences
+      </h1>
+      <div class="hero-typed" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+        <span id="typed-text"></span>
+      </div>
+      <p class="hero-desc" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+        I build AI-driven applications, trained model to responsive web applications, and data solutions that help organizations make smarter decisions.
+      </p>
+      <div class="btn-group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+    </div>
+
+    <div class="hero-right" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+      <div class="avatar-frame" id="avatar-tilt">
+        <div class="avatar-img">
+          <img id="hero-avatar" src="jacques-black.jpg" data-dark="jacques-black.jpg" data-light="jacques-white.jpg" alt="Jacques Nico Belmonte" class="avatar-photo" />
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num" data-count="8">0</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-count="1">0</div>
+          <div class="stat-label">Year/s Exp.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-count="2">0</div>
+          <div class="stat-label">Clients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ── -->
+  <section id="about">
+    <div class="section-label" data-aos="fade-up">About</div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Turning ideas into <em>reality</em></h2>
+    <div class="about-grid">
+      <div class="about-text" data-aos="fade-right" data-aos-duration="700">
+        <p>
+          Hi, I'm <strong>Jacques Nico Belmonte</strong> — an entry level AI developer, web developer, and data scientist.
+          I specialize in building intelligent web applications, predictive models, and data-driven products.
+        </p>
+        <p>
+          My work blends machine learning, modern frontend development, and scalable backend architecture.
+          I focus on turning data into insight, building responsive user experiences, and creating systems
+          that perform reliably at scale.
+        </p>
+        <p>
+          Outside of code, I enjoy exploring new AI techniques, analyzing datasets, and designing polished,
+          user-first digital experiences.
+        </p>
+        <a href="#contact" class="btn btn-outline" style="margin-top:1rem;display:inline-flex">Let's talk →</a>
+      </div>
+      <div class="skills-grid" data-aos="fade-left" data-aos-duration="700">
+        <div class="skill-item" data-tilt data-tilt-max="8" data-tilt-speed="400">
+          <div class="skill-icon">🌐</div>
+          <div class="skill-name">Web Technology</div>
+          <div class="skill-desc">HTML, CSS, JavaScript, Node.js, Flask, Bootstrap, JSON</div>
+        </div>
+        <div class="skill-item" data-tilt data-tilt-max="8" data-tilt-speed="400">
+          <div class="skill-icon">📊</div>
+          <div class="skill-name">AI / ML & Data Science</div>
+          <div class="skill-desc">Python, TensorFlow, PyTorch, Pandas, NumPy, Scikit-Learn, Pandas, Matplotlib, Seaborn, Jupyter, Streamlit, NumPy</div>
+        </div>
+        <div class="skill-item" data-tilt data-tilt-max="8" data-tilt-speed="400">
+          <div class="skill-icon">🔤</div>
+          <div class="skill-name">Natural Language Processing</div>
+          <div class="skill-desc">Support Vector Machine, RoBERTa, Naive Bayes</div>
+        </div>
+        <div class="skill-item" data-tilt data-tilt-max="8" data-tilt-speed="400">
+          <div class="skill-icon">👁️</div>
+          <div class="skill-name">Computer Vision</div>
+          <div class="skill-desc">Convolutional Neural Networks, OpenCV, YOLO</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects ── -->
+  <section id="projects">
+    <div class="section-label" data-aos="fade-up">Work</div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Selected <em>Projects</em></h2>
+    <div class="projects-grid">
+
+      <div class="project-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+        <div class="project-img">
+          🛒
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tag">Web App · E-Commerce</div>
+          <div class="project-title">Storé — Marketplace</div>
+          <p class="project-desc">A full-stack e-commerce platform with real-time inventory, Stripe payments, and a custom headless CMS built for performance.</p>
+          <div class="project-links">
+            <a href="#" class="project-link">Live Demo</a>
+            <a href="#" class="project-link">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+        <div class="project-img">
+          📊
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tag">Dashboard · SaaS</div>
+          <div class="project-title">Velo Analytics</div>
+          <p class="project-desc">Real-time analytics dashboard with interactive D3 charts, multi-tenant auth, and a powerful query builder for data exploration.</p>
+          <div class="project-links">
+            <a href="#" class="project-link">Live Demo</a>
+            <a href="#" class="project-link">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+        <div class="project-img">
+          🤖
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tag">AI · Productivity</div>
+          <div class="project-title">Arca — AI Workspace</div>
+          <p class="project-desc">AI-powered personal productivity app with document summarization, smart tagging, and a conversational interface built on LLM APIs.</p>
+          <div class="project-links">
+            <a href="#" class="project-link">Live Demo</a>
+            <a href="#" class="project-link">Source Code</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Experience ── -->
+  <section id="experience">
+    <div class="section-label" data-aos="fade-up">Experience</div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Where I've <em>worked</em></h2>
+    <div class="timeline">
+
+      <div class="timeline-item" data-aos="fade-right" data-aos-delay="0">
+        <div class="timeline-year">2023 — Present</div>
+        <div class="timeline-role">Senior Frontend Engineer</div>
+        <div class="timeline-company">Company Name · Remote</div>
+        <p class="timeline-desc">Led the redesign of the core product UI, improving load performance by 40% and increasing user engagement metrics across all key dashboards.</p>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+        <div class="timeline-year">2021 — 2023</div>
+        <div class="timeline-role">Full Stack Developer</div>
+        <div class="timeline-company">Agency Name · City</div>
+        <p class="timeline-desc">Built and shipped 12+ client projects ranging from SaaS platforms to content-driven marketing sites. Primary stack: React, Node.js, PostgreSQL.</p>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+        <div class="timeline-year">2019 — 2021</div>
+        <div class="timeline-role">UI/UX Designer &amp; Developer</div>
+        <div class="timeline-company">Startup Name · City</div>
+        <p class="timeline-desc">Wore multiple hats in a fast-paced startup environment — from user research and wireframing to implementing production-ready React components.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section id="contact">
+    <div class="section-label" data-aos="fade-up">Contact</div>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="50">Let's <em>create</em><br>together</h2>
+    <p data-aos="fade-up" data-aos-delay="100">
+      I'm always open to interesting projects, collaborations, or just a good conversation about craft and code.
+    </p>
+    <div class="contact-actions" data-aos="fade-up" data-aos-delay="150">
+      <a href="mailto:hello@yourname.com" class="btn btn-primary contact-btn">
+        hello@yourname.com
+      </a>
+      
+    </div>
+    <div class="social-links" data-aos="fade-up" data-aos-delay="200">
+      <a href="#" class="social-link" title="GitHub">GH</a>
+      <a href="#" class="social-link" title="LinkedIn">IN</a>
+      <a href="#" class="social-link" title="Twitter/X">X</a>
+      <a href="#" class="social-link" title="Dribbble">DR</a>
+      <a href="#" class="social-link" title="Read.cv">CV</a>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <span>© 2026 Your Name — All rights reserved</span>
+    <span>Designed &amp; built with intention</span>
+  </footer>
+
+</body>
 </html>
