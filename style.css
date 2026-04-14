@@ -109,23 +109,74 @@ nav, section, .project-card, .skill-item, .btn, .social-link, .timeline-item, .a
 }
 
 .theme-toggle {
+  width: 58px;
+  height: 30px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg3);
+  color: transparent;
+  cursor: pointer;
+  transition: background 0.35s ease, border-color 0.35s ease;
+  overflow: hidden;
+}
+
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease, background 0.35s ease;
+  z-index: 1;
+}
+
+.theme-toggle::after {
+  content: '🌙';
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  pointer-events: none;
+  color: var(--white);
+  z-index: 2;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+}
+
+body.light-mode .theme-toggle {
+  background: var(--white);
+}
+
+body.light-mode .theme-toggle::before {
+  transform: translateX(26px);
+}
+
+body.light-mode .theme-toggle::after {
+  content: '☀️';
+  left: unset;
+  right: 0px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
   width: 25px;
   height: 25px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--text);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease;
-}
-
-.theme-toggle:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 0;
 }
 
 .contact-actions {
@@ -489,6 +540,14 @@ section { padding: 7rem 4rem; }
   position: relative;
 }
 
+.project-img img,
+.project-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 .project-img-overlay {
   position: absolute;
   inset: 0;
@@ -598,11 +657,46 @@ section { padding: 7rem 4rem; }
   max-width: 500px;
 }
 
+.education-achievements {
+  margin-top: 1rem;
+}
+
+.achievement-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.education-achievements ul {
+  list-style: disc inside;
+  color: var(--muted);
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.education-achievements li {
+  font-size: 0.8rem;
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+}
+
+.education-term {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ============================================================
+   Education
+   ============================================================ */
+#education { background: var(--bg); }
+
 /* ============================================================
    Contact
    ============================================================ */
 #contact {
-  background: var(--bg);
+  background: var(--bg2);
   text-align: center;
   padding: 8rem 4rem;
 }

@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.toggle('dark-mode', theme === 'dark');
     setAvatarTheme(theme);
     if (themeToggle) {
-      themeToggle.textContent = theme === 'light' ? '🌙' : '☀️';
+      themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
     }
   };
 
