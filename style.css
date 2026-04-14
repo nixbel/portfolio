@@ -740,6 +740,13 @@ section { padding: 7rem 4rem; }
   transition: all 0.25s;
 }
 
+.social-link svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+
 .social-link:hover {
   border-color: var(--accent);
   color: var(--accent);
