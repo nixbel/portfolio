@@ -812,11 +812,20 @@ footer {
 
   #hero {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
     padding: 7rem 2rem 4rem;
   }
 
   .hero-right {
-    align-items: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  .avatar-frame {
+    margin: 0 auto;
+    max-width: 100%;
   }
 
   .hero-stats {
@@ -885,6 +894,17 @@ footer {
 
   .hero-desc {
     max-width: 100%;
+  }
+
+  .hero-right {
+    align-items: center;
+    width: 100%;
+  }
+
+  .avatar-frame {
+    width: 220px;
+    height: 280px;
+    margin: 0 auto;
   }
 
   .hero-stats {
