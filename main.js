@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new Typed('#typed-text', {
       strings: [
         'AI-first products with real business impact.',
-        'From trained model direct to responsive web applications that convert.',
+        'From trained model to production-ready solution.',
         'Data science workflows for smarter insights.',
         'Bringing models, data, and design together.',
       ],

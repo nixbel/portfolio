@@ -791,7 +791,7 @@ section { padding: 7rem 4rem; }
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: -2rem;
+  left: -2.20rem;
   top: 0.4rem;
   width: 7px;
   height: 7px;
@@ -1095,15 +1095,20 @@ footer {
   }
 
   .timeline {
-    padding-left: 1rem;
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    left: 1rem;
   }
 
   .timeline-item {
-    padding-left: 1rem;
+    padding-left: 2.5rem;
   }
 
   .timeline-item::before {
-    left: -1.5rem;
+    left: 1rem;
+    transform: translateX(-50%);
   }
 }
 
