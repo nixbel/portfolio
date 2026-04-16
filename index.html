@@ -31,14 +31,23 @@
   <!-- ── Nav ── -->
   <nav id="navbar">
     <a href="#hero" class="nav-logo">Jacques Nico L. Belmonte</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#works">Works</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode"></button>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode"></button>
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
   </nav>
 
   <!-- ── Hero ── -->
@@ -54,12 +63,9 @@
         <span id="typed-text"></span>
       </div>
       <p class="hero-desc" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-        I build AI-driven applications, trained model to responsive web applications, and data solutions that help organizations make smarter decisions.
+        I build AI-driven applications, trained model to responsive web applications, and data solutions that help organizations make smarter decisions. I also create intuitive experiences that connect data, models, and design with real business outcomes.
       </p>
-      <div class="btn-group" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-        <a href="#works" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
-      </div>
+     
     </div>
 
     <div class="hero-right" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
@@ -104,7 +110,10 @@
           Outside of code, I enjoy exploring new AI techniques, analyzing datasets, and designing polished,
           user-first digital experiences.
         </p>
-        <a href="#contact" class="btn btn-outline" style="margin-top:1rem;display:inline-flex">Let's talk →</a>
+        <div class="about-actions">
+          
+          <button id="resume-open-btn" class="btn btn-primary" type="button">View my Resume</button>
+        </div>
       </div>
       <div class="skills-grid" data-aos="fade-left" data-aos-duration="700">
         <div class="skill-item" data-tilt data-tilt-max="8" data-tilt-speed="400">
@@ -344,6 +353,14 @@
       <span class="footer-note">Thank you for visiting my portfolio website.</span>
     </div>
   </footer>
+
+  <div id="resume-overlay" class="resume-overlay" aria-hidden="true">
+    <div class="resume-overlay-backdrop" data-action="close"></div>
+    <div class="resume-overlay-panel" role="dialog" aria-modal="true" aria-label="Resume preview">
+      <button id="resume-overlay-close" class="resume-overlay-close" type="button" aria-label="Close resume preview">✕</button>
+      <embed src="Belmonte-Updated_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" type="application/pdf" class="resume-pdf-embed" aria-label="Resume preview">
+    </div>
+  </div>
 
 </body>
 </html>

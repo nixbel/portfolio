@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── Navbar: add bg on scroll ───────────────────────────── */
   const nav = document.getElementById('navbar');
+  const navToggle = document.getElementById('nav-toggle');
   const themeToggle = document.getElementById('theme-toggle');
   const heroAvatar = document.getElementById('hero-avatar');
 
@@ -34,6 +35,22 @@ document.addEventListener('DOMContentLoaded', () => {
       const nextTheme = document.body.classList.contains('light-mode') ? 'dark' : 'light';
       applyTheme(nextTheme);
       localStorage.setItem('theme', nextTheme);
+    });
+  }
+
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (nav.classList.contains('nav-open')) {
+          nav.classList.remove('nav-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   }
 
@@ -104,5 +121,36 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
 
   counters.forEach(c => counterObserver.observe(c));
+
+  /* ── Resume Overlay ─────────────────────────────────────── */
+  const resumeOpenBtn = document.getElementById('resume-open-btn');
+  const resumeOverlay = document.getElementById('resume-overlay');
+  const resumeOverlayClose = document.getElementById('resume-overlay-close');
+  const resumeOverlayBackdrop = document.querySelector('.resume-overlay-backdrop');
+
+  const setResumeOverlayVisible = visible => {
+    if (!resumeOverlay) return;
+    resumeOverlay.classList.toggle('open', visible);
+    resumeOverlay.setAttribute('aria-hidden', visible ? 'false' : 'true');
+    document.body.style.overflow = visible ? 'hidden' : '';
+  };
+
+  if (resumeOpenBtn) {
+    resumeOpenBtn.addEventListener('click', () => {
+      setResumeOverlayVisible(true);
+    });
+  }
+
+  [resumeOverlayClose, resumeOverlayBackdrop].forEach(element => {
+    if (element) {
+      element.addEventListener('click', () => setResumeOverlayVisible(false));
+    }
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && resumeOverlay && resumeOverlay.classList.contains('open')) {
+      setResumeOverlayVisible(false);
+    }
+  });
 
 });
